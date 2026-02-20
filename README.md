@@ -1,29 +1,29 @@
 # 🚀 Python Test Automation Framework (ATF) Demo
 
-Этот проект представляет собой демонстрационный фреймворк для автоматизированного тестирования (UI и API), созданный с нуля на Python. Цель проекта — показать применение современных паттернов проектирования и инструментов тестирования.
+This project is a demonstrative Automated Testing Framework (UI and API) built from scratch using Python. The primary goal is to showcase the implementation of modern design patterns, testing tools, and best practices in test automation.
 
-## 🛠 Технологический стек
+## 🛠 Tech Stack
 
-* **Язык:** Python 3.11
-* **Тестовый фреймворк:** Pytest
-* **UI Тестирование:** Playwright (с использованием паттерна Page Object Model)
-* **API Тестирование:** Requests (синхронные запросы) и HTTPX (асинхронные запросы)
-* **Unit Тестирование:** pytest-mock (изоляция зависимостей)
-* **Генерация данных:** Faker
-* **Отчетность:** Allure Report (с автоматическим прикреплением скриншотов)
+* **Language:** Python 3.11
+* **Test Runner:** Pytest
+* **UI Testing:** Playwright (implementing Page Object Model)
+* **API Testing:** Requests (synchronous) and HTTPX (asynchronous)
+* **Unit Testing:** pytest-mock (dependency isolation)
+* **Data Generation:** Faker
+* **Reporting:** Allure Report (with automated screenshot attachments on success/failure)
 
-## 📁 Структура проекта
+## 📁 Project Structure
 
-* `pages/` — классы Page Object для описания веб-страниц (инкапсуляция локаторов и методов).
-* `tests/api/` — тесты для проверки REST API (на примере DummyJSON).
-* `tests/ui/` — UI автотесты (на примере SauceDemo).
-* `tests/unit/` — модульные тесты для проверки вспомогательных утилит (с использованием моков).
-* `utils/` — вспомогательные классы и генераторы тестовых данных.
-* `conftest.py` — конфигурация Pytest и хуки для генерации Allure-отчетов со скриншотами.
+* `pages/` — Page Object classes for web pages (encapsulating locators and methods).
+* `tests/api/` — REST API tests (using DummyJSON).
+* `tests/ui/` — UI automated tests (using SauceDemo).
+* `tests/unit/` — Unit tests verifying helper utilities (using mocks).
+* `utils/` — Helper classes and mock data generators.
+* `conftest.py` — Pytest configuration and hooks for Allure reporting.
 
-## ⚙️ Установка и настройка
+## ⚙️ Installation & Setup
 
-**1. Клонирование репозитория:**
+**1. Clone the repository:**
 ```bash
 git clone [https://github.com/ВАШ_НИКНЕЙМ/ATF_Python_Demo.git](https://github.com/ВАШ_НИКНЕЙМ/ATF_Python_Demo.git)
 cd ATF_Python_Demo
