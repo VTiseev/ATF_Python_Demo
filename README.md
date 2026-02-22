@@ -14,12 +14,26 @@ This project is a demonstrative Automated Testing Framework (UI and API) built f
 
 ## 📁 Project Structure
 
-* `pages/` — Page Object classes for web pages (encapsulating locators and methods).
-* `tests/api/` — REST API tests (using DummyJSON).
-* `tests/ui/` — UI automated tests (using SauceDemo).
-* `tests/unit/` — Unit tests verifying helper utilities (using mocks).
-* `utils/` — Helper classes and mock data generators.
-* `conftest.py` — Pytest configuration and hooks for Allure reporting.
+## 📁 Project Structure
+
+```text
+ATF_Python_Demo/
+├── pages/                        # Page Object классы
+│   └── login_page.py             # Логика и локаторы страницы авторизации
+├── tests/                        # Тестовые сценарии
+│   ├── api/                      # API тесты
+│   │   └── test_api_dummyjson.py # Тесты для DummyJSON API
+│   ├── ui/                       # UI тесты
+│   │   └── test_ui_saucedemo.py  # Тесты интерфейса SauceDemo
+│   └── unit/                     # Unit тесты
+│       └── test_utils_mock.py    # Тестирование утилит с помощью моков
+├── utils/                        # Вспомогательные утилиты
+│   └── data_generator.py         # Генерация тестовых данных (например, Faker)
+├── .gitignore                    # Файлы и папки, игнорируемые Git
+├── README.md                     # Документация проекта
+├── conftest.py                   # Фикстуры Pytest и настройки (например, Allure)
+├── pytest.ini                    # Конфигурационный файл Pytest
+└── requirements.txt              # Зависимости проекта
 
 ## ⚙️ Installation & Setup
 
