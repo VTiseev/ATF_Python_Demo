@@ -55,4 +55,4 @@ def test_login_invalid_password_negative(page: Page):
     login_p.navigate()
     login_p.login("standard_user", "wrong_pass")
 
-    assert "Username and password do NOT match" in login_p.get_error_text()
+    assert "Username and password do not match" in login_p.get_error_text()
