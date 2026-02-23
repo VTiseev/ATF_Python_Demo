@@ -1,5 +1,7 @@
-from utils.data_generator import UserGenerator
 import pytest
+
+from utils.data_generator import UserGenerator
+
 
 def test_generate_user_mocked(mocker):
     """

@@ -1,5 +1,6 @@
-import requests
 import httpx  # Добавили импорт для асинхронных запросов
+import requests
+
 
 class DummyJsonClient:
     """Класс-клиент для работы с API DummyJSON (Синхронный)."""

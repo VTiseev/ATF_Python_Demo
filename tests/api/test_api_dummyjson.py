@@ -1,9 +1,7 @@
-import pytest
-import requests
-import httpx
 import allure
+import pytest
+
 # Импортируем наш новый клиент
-from utils.api_client import DummyJsonClient
 
 BASE_URL = "https://dummyjson.com"
 

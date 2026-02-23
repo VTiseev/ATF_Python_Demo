@@ -10,10 +10,11 @@ This project is a demonstrative Automated Testing Framework (UI and API) built f
 * **Language:** Python 3.11
 * **Test Runner:** Pytest
 * **UI Testing:** Playwright (implementing Page Object Model)
+* **BDD Testing:** pytest-bdd (Behavior-Driven Development)
 * **API Testing:** Requests (synchronous) and HTTPX (asynchronous)
 * **Unit Testing:** pytest-mock (dependency isolation)
 * **Data Generation:** Faker
-* **Reporting:** Allure Report (with automated screenshot attachments on success/failure)
+* **Reporting:** Allure Report (with automated screenshot attachments)
 
 
 ## 📁 Project Structure
@@ -25,12 +26,16 @@ ATF_Python_Demo/
 ├── tests/                        # Тестовые сценарии
 │   ├── api/                      # API тесты
 │   │   └── test_api_dummyjson.py # Тесты для DummyJSON API
+│   ├── bdd/                      # BDD тесты (Behavior-Driven Development)
+│   │   ├── features/             # Gherkin сценарии (текстовые шаги)
+│   │   └── test_bdd_login.py     # Python-код для выполнения шагов BDD
 │   ├── ui/                       # UI тесты
 │   │   └── test_ui_saucedemo.py  # Тесты интерфейса SauceDemo
 │   └── unit/                     # Unit тесты
 │       └── test_utils_mock.py    # Тестирование утилит с помощью моков
 ├── utils/                        # Вспомогательные утилиты
 │   └── data_generator.py         # Генерация тестовых данных (например, Faker)
+├── .github/workflows/            # CI/CD Pipeline для GitHub Actions
 ├── .gitignore                    # Файлы и папки, игнорируемые Git
 ├── README.md                     # Документация проекта
 ├── conftest.py                   # Фикстуры Pytest и настройки (например, Allure)
