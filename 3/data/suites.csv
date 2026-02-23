@@ -1,0 +1,29 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Негативный тест: Авторизация с неверными данными.","46","test_login_unsuccessful_negative","tests.api","Mon Feb 23 12:00:53 UTC 2026","passed","Mon Feb 23 12:00:53 UTC 2026","","test_api_dummyjson","",""
+"
+    Параметризованный тест: проверяем, что метод generate_users
+    возвращает список правильной длины.
+    Мы запустим этот тест 3 раза: для 0, 1 и 5 пользователей.
+    ","2","test_generate_users_count[0]","tests.unit","Mon Feb 23 12:00:55 UTC 2026","passed","Mon Feb 23 12:00:55 UTC 2026","","test_utils_mock","",""
+"Негативный асинхронный тест: Продукт не найден.","59","test_product_not_found_async_negative","tests.api","Mon Feb 23 12:00:53 UTC 2026","passed","Mon Feb 23 12:00:53 UTC 2026","","test_api_dummyjson","",""
+"Позитивный тест: Успешный логин.","353","test_login_standard_user_positive[chromium]","tests.ui","Mon Feb 23 12:00:53 UTC 2026","passed","Mon Feb 23 12:00:54 UTC 2026","","test_ui_saucedemo","",""
+"Негативный тест: Неверный пароль.","262","test_login_invalid_password_negative[chromium]","tests.ui","Mon Feb 23 12:00:55 UTC 2026","passed","Mon Feb 23 12:00:55 UTC 2026","","test_ui_saucedemo","",""
+"
+    Параметризованный тест: проверяем, что метод generate_users
+    возвращает список правильной длины.
+    Мы запустим этот тест 3 раза: для 0, 1 и 5 пользователей.
+    ","2","test_generate_users_count[5]","tests.unit","Mon Feb 23 12:00:55 UTC 2026","passed","Mon Feb 23 12:00:55 UTC 2026","","test_utils_mock","",""
+"Позитивный тест: Добавление товара в корзину.","340","test_add_to_cart_positive[chromium]","tests.ui","Mon Feb 23 12:00:54 UTC 2026","passed","Mon Feb 23 12:00:54 UTC 2026","","test_ui_saucedemo","",""
+"
+    Unit тест с использованием Mock.
+    Мы подменяем реальный метод faker.first_name и faker.job,
+    чтобы проверить логику нашего класса UserGenerator, а не библиотеки Faker.
+    ","2","test_generate_user_mocked","tests.unit","Mon Feb 23 12:00:55 UTC 2026","passed","Mon Feb 23 12:00:55 UTC 2026","","test_utils_mock","",""
+"
+    Параметризованный тест: проверяем, что метод generate_users
+    возвращает список правильной длины.
+    Мы запустим этот тест 3 раза: для 0, 1 и 5 пользователей.
+    ","1","test_generate_users_count[1]","tests.unit","Mon Feb 23 12:00:55 UTC 2026","passed","Mon Feb 23 12:00:55 UTC 2026","","test_utils_mock","",""
+"Позитивный тест: Добавление продукта (POST).","62","test_add_product_positive","tests.api","Mon Feb 23 12:00:52 UTC 2026","passed","Mon Feb 23 12:00:53 UTC 2026","","test_api_dummyjson","",""
+"Негативный тест: Заблокированный пользователь.","260","test_login_locked_out_user_negative[chromium]","tests.ui","Mon Feb 23 12:00:54 UTC 2026","passed","Mon Feb 23 12:00:55 UTC 2026","","test_ui_saucedemo","",""
+"Позитивный асинхронный тест: Получение списка продуктов.","82","test_get_products_async_positive","tests.api","Mon Feb 23 12:00:53 UTC 2026","passed","Mon Feb 23 12:00:53 UTC 2026","","test_api_dummyjson","",""
