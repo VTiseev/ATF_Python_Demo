@@ -1,5 +1,5 @@
 from utils.data_generator import UserGenerator
-
+import pytest
 
 def test_generate_user_mocked(mocker):
     """
@@ -23,3 +23,21 @@ def test_generate_user_mocked(mocker):
     assert user['job'] == 'Tester'
     # Проверяем, что результат действительно словарь
     assert isinstance(user, dict)
+
+
+@pytest.mark.parametrize("count", [0, 1, 5])
+def test_generate_users_count(count):
+    """
+    Параметризованный тест: проверяем, что метод generate_users
+    возвращает список правильной длины.
+    Мы запустим этот тест 3 раза: для 0, 1 и 5 пользователей.
+    """
+    generator = UserGenerator()
+
+    # Действие: генерируем нужное количество пользователей
+    users = generator.generate_users(count)
+
+    # Проверка: длина списка должна совпадать с запрошенным числом
+    assert len(users) == count
+    # Проверяем, что возвращается именно список (list)
+    assert isinstance(users, list)

@@ -12,7 +12,6 @@ This project is a demonstrative Automated Testing Framework (UI and API) built f
 * **Data Generation:** Faker
 * **Reporting:** Allure Report (with automated screenshot attachments on success/failure)
 
-## 📁 Project Structure
 
 ## 📁 Project Structure
 
