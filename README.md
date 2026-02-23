@@ -22,25 +22,37 @@ This project is a demonstrative Automated Testing Framework (UI and API) built f
 ```text
 ATF_Python_Demo/
 ├── pages/                        # Page Object классы
-│   └── login_page.py             # Логика и локаторы страницы авторизации
+│   ├── base_page.py
+│   ├── inventory_page.py
+│   └── login_page.py
 ├── tests/                        # Тестовые сценарии
-│   ├── api/                      # API тесты
-│   │   └── test_api_dummyjson.py # Тесты для DummyJSON API
+│   ├── api/                      # API тесты (с проверкой OpenAPI/JSON схем)
 │   ├── bdd/                      # BDD тесты (Behavior-Driven Development)
-│   │   ├── features/             # Gherkin сценарии (текстовые шаги)
-│   │   └── test_bdd_login.py     # Python-код для выполнения шагов BDD
-│   ├── ui/                       # UI тесты
-│   │   └── test_ui_saucedemo.py  # Тесты интерфейса SauceDemo
-│   └── unit/                     # Unit тесты
-│       └── test_utils_mock.py    # Тестирование утилит с помощью моков
-├── utils/                        # Вспомогательные утилиты
-│   └── data_generator.py         # Генерация тестовых данных (например, Faker)
+│   │   ├── features/             # Gherkin сценарии
+│   │   └── test_bdd_login.py
+│   ├── ui/                       # UI тесты (Playwright)
+│   └── unit/                     # Unit и Архитектурные тесты
+│       ├── test_architecture.py  # Проверка независимости слоев (Arch Unit)
+│       └── test_utils_mock.py
+├── utils/                        # Вспомогательные утилиты и схемы
 ├── .github/workflows/            # CI/CD Pipeline для GitHub Actions
-├── .gitignore                    # Файлы и папки, игнорируемые Git
-├── README.md                     # Документация проекта
-├── conftest.py                   # Фикстуры Pytest и настройки (например, Allure)
+├── Dockerfile                    # Рецепт сборки Docker-образа
+├── .dockerignore                 # Файлы, исключаемые из Docker-контейнера
+├── conftest.py                   # Фикстуры Pytest
 ├── pytest.ini                    # Конфигурационный файл Pytest
 └── requirements.txt              # Зависимости проекта
+
+* **Architecture Testing:** Native `ast` module (Arch Unit analog for Python) to verify project structural integrity.
+* **Schema Validation:** `jsonschema` for API contract testing.
+* **Containerization:** Docker (isolated Linux environment for test execution).
+
+## 🐳 Running Tests in Docker
+
+You can run the entire test suite in an isolated Linux container without installing Python or browsers on your local machine.
+
+1. Build the Docker image:
+   ```bash
+   docker build -t atf-demo .
 
 ## ⚙️ Installation & Setup
 
