@@ -2,7 +2,7 @@ import pytest
 import allure
 from pages.login_page import LoginPage
 from playwright.sync_api import Page, expect
-
+from pages.inventory_page import InventoryPage
 
 @allure.feature("UI Testing")
 @allure.story("Login Scenarios")
@@ -21,19 +21,29 @@ def test_login_standard_user_positive(page: Page):
         expect(page).to_have_url("https://www.saucedemo.com/inventory.html")
 
 
+# Не забудь добавить импорт InventoryPage в самом верху файла test_ui_saucedemo.py:
+# from pages.inventory_page import InventoryPage
+
 @allure.feature("UI Testing")
 @allure.story("Login Scenarios")
 def test_add_to_cart_positive(page: Page):
     """Позитивный тест: Добавление товара в корзину."""
+    # 1. Инициализируем страницы
     login_p = LoginPage(page)
-    login_p.navigate()
-    login_p.login("standard_user", "secret_sauce")
+    inventory_p = InventoryPage(page)
 
-    # Прямое взаимодействие (для простоты примера без PageObject инвентаря)
-    page.locator("#add-to-cart-sauce-labs-backpack").click()
+    # 2. Логинимся
+    with allure.step("Open Login Page and Login"):
+        login_p.navigate()
+        login_p.login("standard_user", "secret_sauce")
 
-    cart_badge = page.locator(".shopping_cart_badge")
-    expect(cart_badge).to_have_text("1")
+    # 3. Добавляем товар (теперь через Page Object!)
+    with allure.step("Add backpack to cart"):
+        inventory_p.add_backpack_to_cart()
+
+    # 4. Проверяем результат
+    with allure.step("Verify cart badge shows 1 item"):
+        assert inventory_p.get_cart_items_count() == "1"
 
 
 @allure.feature("UI Testing")
@@ -55,4 +65,4 @@ def test_login_invalid_password_negative(page: Page):
     login_p.navigate()
     login_p.login("standard_user", "wrong_pass")
 
-    assert "Username and password do NOT match" in login_p.get_error_text()
+    assert "Username and password do not match" in login_p.get_error_text()
