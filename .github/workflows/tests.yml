@@ -1,39 +1,58 @@
 name: Automated Tests
 
-# Когда запускать этот сценарий?
 on:
   push:
-    branches: [ "main" ] # Запускать при каждом пуше в ветку main
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
+# Разрешаем GitHub Actions вносить изменения в наш репозиторий (нужно для публикации сайта)
+permissions:
+  contents: write
+
 jobs:
   test:
-    # Какой виртуальный компьютер нам нужен? Берем последнюю версию Ubuntu (Linux)
     runs-on: ubuntu-latest
 
-    # Шаги, которые компьютер должен выполнить по порядку
     steps:
-    # 1. Скачиваем твой код из репозитория
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # 2. Устанавливаем Python 3.11 (как у тебя в требованиях)
     - name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
         python-version: "3.11"
 
-    # 3. Устанавливаем все библиотеки (pytest, playwright, faker и т.д.)
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    # 4. Устанавливаем браузеры для UI тестов (Playwright)
     - name: Install Playwright browsers
       run: playwright install --with-deps chromium
 
-    # 5. Запускаем все тесты!
+    # ЗАПУСК ТЕСТОВ: добавляем флаг --alluredir
+    # continue-on-error: true говорит GitHub не останавливать работу, если тесты упадут
     - name: Run tests
-      run: pytest
+      run: pytest --alluredir=allure-results
+      continue-on-error: true
+
+    # ГЕНЕРАЦИЯ ОТЧЕТА: магия Allure
+    - name: Generate Allure Report
+      uses: simple-elf/allure-report-action@master
+      if: always()
+      id: allure-report
+      with:
+        allure_results: allure-results
+        gh_pages: gh-pages
+        allure_report: allure-report
+        allure_history: allure-history
+
+    # ПУБЛИКАЦИЯ: отправляем сайт в ветку gh-pages
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      if: always()
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: allure-history
