@@ -1,0 +1,7 @@
+"BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
+"0","","0","","4","0","","0"
+"0","","0","API Testing","2","0","Negative Scenarios","0"
+"0","","0","UI Testing","2","0","Negative Login Scenarios","0"
+"0","","0","API Testing","1","0","Async Requests (HTTPX lib)","0"
+"0","","0","UI Testing","2","0","Login Scenarios","0"
+"0","","0","API Testing","1","0","Synchronous Requests (Requests lib)","0"
