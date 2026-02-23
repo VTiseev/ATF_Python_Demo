@@ -2,6 +2,9 @@
 
 This project is a demonstrative Automated Testing Framework (UI and API) built from scratch using Python. The primary goal is to showcase the implementation of modern design patterns, testing tools, and best practices in test automation.
 
+[![Automated Tests](https://github.com/VTiseev/ATF_Python_Demo/actions/workflows/tests.yml/badge.svg)](https://github.com/VTiseev/ATF_Python_Demo/actions/workflows/tests.yml)
+📊 **[View Latest Allure Report](https://VTiseev.github.io/ATF_Python_Demo/)**
+
 ## 🛠 Tech Stack
 
 * **Language:** Python 3.11
