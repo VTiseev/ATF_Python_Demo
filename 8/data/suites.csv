@@ -1,0 +1,36 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Позитивный тест: Добавление товара в корзину.","346","test_add_to_cart_positive[chromium]","tests.ui","Tue Mar 03 08:23:55 UTC 2026","passed","Tue Mar 03 08:23:56 UTC 2026","","test_ui_saucedemo","",""
+"Негативный асинхронный тест: Продукт не найден.","68","test_product_not_found_async_negative","tests.api","Tue Mar 03 08:23:52 UTC 2026","passed","Tue Mar 03 08:23:52 UTC 2026","","test_api_dummyjson","",""
+"Негативный тест: Авторизация с неверными данными.","66","test_login_unsuccessful_negative","tests.api","Tue Mar 03 08:23:52 UTC 2026","passed","Tue Mar 03 08:23:52 UTC 2026","","test_api_dummyjson","",""
+"
+    Параметризованный тест: проверяем, что метод generate_users
+    возвращает список правильной длины.
+    Мы запустим этот тест 3 раза: для 0, 1 и 5 пользователей.
+    ","1","test_generate_users_count[0]","tests.unit","Tue Mar 03 08:23:56 UTC 2026","passed","Tue Mar 03 08:23:56 UTC 2026","","test_utils_mock","",""
+"/home/runner/work/ATF_Python_Demo/ATF_Python_Demo/tests/bdd/features/login.feature: Unsuccessful login with wrong credentials","321","test_unsuccessful_login_with_wrong_credentials[locked_out_user-secret_sauce-Sorry, this user has been locked out]","tests.bdd","Tue Mar 03 08:23:54 UTC 2026","passed","Tue Mar 03 08:23:54 UTC 2026","","test_bdd_login","",""
+"
+    Unit тест с использованием Mock.
+    Мы подменяем реальный метод faker.first_name и faker.job,
+    чтобы проверить логику нашего класса UserGenerator, а не библиотеки Faker.
+    ","3","test_generate_user_mocked","tests.unit","Tue Mar 03 08:23:56 UTC 2026","passed","Tue Mar 03 08:23:56 UTC 2026","","test_utils_mock","",""
+"Позитивный асинхронный тест: Получение списка продуктов.","112","test_get_products_async_positive","tests.api","Tue Mar 03 08:23:52 UTC 2026","passed","Tue Mar 03 08:23:52 UTC 2026","","test_api_dummyjson","",""
+"
+    Параметризованный тест: проверяем, что метод generate_users
+    возвращает список правильной длины.
+    Мы запустим этот тест 3 раза: для 0, 1 и 5 пользователей.
+    ","1","test_generate_users_count[5]","tests.unit","Tue Mar 03 08:23:56 UTC 2026","passed","Tue Mar 03 08:23:56 UTC 2026","","test_utils_mock","",""
+"Негативный тест: Неверный пароль.","280","test_login_invalid_password_negative[chromium]","tests.ui","Tue Mar 03 08:23:56 UTC 2026","passed","Tue Mar 03 08:23:56 UTC 2026","","test_ui_saucedemo","",""
+"
+    Архитектурный тест: проверяем, что Page Objects (папка pages)
+    не зависят от тестов (папка tests).
+    ","1","test_pages_do_not_import_tests","tests.unit","Tue Mar 03 08:23:56 UTC 2026","passed","Tue Mar 03 08:23:56 UTC 2026","","test_architecture","",""
+"Позитивный тест: Успешный логин.","307","test_login_standard_user_positive[chromium]","tests.ui","Tue Mar 03 08:23:55 UTC 2026","passed","Tue Mar 03 08:23:55 UTC 2026","","test_ui_saucedemo","",""
+"Негативный тест: Заблокированный пользователь.","276","test_login_locked_out_user_negative[chromium]","tests.ui","Tue Mar 03 08:23:56 UTC 2026","passed","Tue Mar 03 08:23:56 UTC 2026","","test_ui_saucedemo","",""
+"/home/runner/work/ATF_Python_Demo/ATF_Python_Demo/tests/bdd/features/login.feature: Unsuccessful login with wrong credentials","313","test_unsuccessful_login_with_wrong_credentials[standard_user-wrong_pass-Username and password do not match]","tests.bdd","Tue Mar 03 08:23:54 UTC 2026","passed","Tue Mar 03 08:23:55 UTC 2026","","test_bdd_login","",""
+"
+    Параметризованный тест: проверяем, что метод generate_users
+    возвращает список правильной длины.
+    Мы запустим этот тест 3 раза: для 0, 1 и 5 пользователей.
+    ","1","test_generate_users_count[1]","tests.unit","Tue Mar 03 08:23:56 UTC 2026","passed","Tue Mar 03 08:23:56 UTC 2026","","test_utils_mock","",""
+"/home/runner/work/ATF_Python_Demo/ATF_Python_Demo/tests/bdd/features/login.feature: Successful login with standard user","2169","test_successful_login_with_standard_user","tests.bdd","Tue Mar 03 08:23:52 UTC 2026","passed","Tue Mar 03 08:23:54 UTC 2026","","test_bdd_login","",""
+"Позитивный тест: Добавление продукта (POST).","112","test_add_product_positive","tests.api","Tue Mar 03 08:23:52 UTC 2026","passed","Tue Mar 03 08:23:52 UTC 2026","","test_api_dummyjson","",""
